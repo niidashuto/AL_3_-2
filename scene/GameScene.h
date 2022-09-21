@@ -8,7 +8,6 @@
 #include "SafeDelete.h"
 #include "Sprite.h"
 #include "ViewProjection.h"
-//#include "WorldTransform.h"
 #include"DebugCamera.h"
 #include "PLayer.h"
 #include"Enemy.h"
@@ -101,7 +100,8 @@ private: // メンバ変数
 	uint32_t eneTextureHandle_ = 0;
 	
 	//  object
-	std::unique_ptr<RailCamera> railCamera_;	
+	std::unique_ptr<RailCamera> railCamera_;
+
 	// 天球
 	std::unique_ptr<Skydome> skydome_;
 
@@ -110,14 +110,18 @@ private: // メンバ変数
 
 	// 敵
 	std::list<std::unique_ptr<Enemy>> enemy_;
+
 	std::list<std::unique_ptr<EnemyBullet>> enemyBullets_;
+
 	GameScene* gameScene_ = nullptr;
+
 	std::stringstream enemyPopCommands;
+
 	bool enemyPop = true;
+
 	float enemyPopTime = true;	
 
-	//ワールドトランスフォーム
-	//WorldTransform worldTransform_;
+	
 	
 	//ビュープロジェクション
 	ViewProjection viewProjection_;

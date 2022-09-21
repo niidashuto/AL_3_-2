@@ -5,7 +5,7 @@ void Player::Initialize(Model* model, uint32_t textureHandle) {
 	assert(model);
 
 	model_ = model;
-	textureHandle_ = textureHandle;
+	textureHandle_ = TextureManager::Load("sentouki01.png");
 	
 	Vector3 move(0, 0, 20);
 

@@ -12,7 +12,7 @@ void PlayerBullet::Initialize(Model* model, const Vector3& position, const Vecto
 
 	model_ = model;
 	// テクスチャ読み込み
-	textureHandle_ = TextureManager::Load("ddddog.png");
+	textureHandle_ = TextureManager::Load("tama2.png");
 
 	// ワールドトランスフォーム
 	worldTransform_.Initialize();
@@ -63,9 +63,9 @@ void PlayerBullet::OnCollision() {
 /// ワールド座標を取得
 /// </summary>
 Vector3 PlayerBullet::GetWorldPosition() {
-	//
+	
 	Vector3 worldPos;
-	//
+	
 	worldPos.x = worldTransform_.matWorld_.m[3][0];
 	worldPos.y = worldTransform_.matWorld_.m[3][1];
 	worldPos.z = worldTransform_.matWorld_.m[3][2];
